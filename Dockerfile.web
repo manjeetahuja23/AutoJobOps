@@ -1,0 +1,7 @@
+FROM node:20-alpine
+WORKDIR /workspace
+COPY pnpm-lock.yaml* package.json pnpm-workspace.yaml ./
+RUN corepack enable && pnpm fetch || true
+COPY . .
+RUN pnpm install --frozen-lockfile || pnpm install
+CMD ["pnpm", "--filter", "@autojobops/web", "dev"]
