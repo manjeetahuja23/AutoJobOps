@@ -1,0 +1,17 @@
+{
+  "name": "@autojobops/scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/scraper.ts"
+  },
+  "dependencies": {
+    "playwright": "^1.43.1",
+    "@autojobops/core": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  }
+}
